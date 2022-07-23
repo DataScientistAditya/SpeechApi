@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Peruzor Email Verification</title>
+	<style>
+	    body{
+	    	margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			border: none;
+	    }
+		.Maincontainer{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			
+		}
+		.Emailcontents{
+			position: absolute;
+			width: 70%;
+			height: 80%;
+			top: 10%;
+			overflow: hidden;
+			text-align:center;
+			background: #D9D9D9;
+			border-radius: 10px;
+			padding:10px 10px;
+		}
+		
+		.Emailcontents h1{
+			color: black;
+			font-family: sans-serif;
+		}
+		.MainContent{
+			position: absolute;
+			width: 100%;
+			height: 80%;
+			overflow: hidden;
+			top: 10%;
+			text-align: center;
+			background: linear-gradient(to right bottom,#16415C,#8CDDFC) ;
+			border-radius: 10px;
+		}
+		.MainContent h5{
+			font-size: 20px;
+			color: #D1D1D1;
+			text-align:left;
+		}
+		.MainContent p{
+			font-size: 16px;
+			color: #D1D1D1;
+		}
+	</style>
+</head>
+<body>
+	<div class="Maincontainer">
+		<div class="Emailcontents">
+			<h1>Peruzor Verification</h1>
+			<div class="MainContent">
+				<h5>Hello {{Name}},</h5>
+			<p>Welcome to Peruzor, You registered an account on www.Peruzor.com,before being able to use your account you need to verify that this is your email.</p>
+			<br>
+			<p>This link {{VerificationLink}} will verify your email address, and then you will be able to Start Your Tests.</p>
+			<br>
+			<p style="color:black;text-align:right;margin-right:50px;font-weight: 400;">See you there!</p>
+			<p style="color:black;text-align:right;margin-right:50px;font-weight: 400;">Best regards, the Pruzor team</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
